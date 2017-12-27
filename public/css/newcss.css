@@ -1,0 +1,119 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+h2{
+    clear:left;
+}
+li{
+    position: relative;
+}
+.title_img:hover{
+    opacity: 0.8;
+}
+.container {
+    width: 80%;
+    margin:0px auto;
+}
+.title{
+    font-weight: bold;
+    font-family: 'Indie Flower';
+    /* display: table-cell; */
+}
+.title:hover {
+    color:green;
+}
+.Entities {
+    border-style: double;
+    text-align: center;
+}
+.Entities td {
+    text-align: left;
+}
+.content{
+    font-family: 'cwTeXKai', serif;
+}
+tbody tr:nth-child(2n){
+    background-color: #cccccc;
+}
+tbody tr:nth-child(n+1):hover{
+    background-color: #ffffcc;
+ }
+.box{
+    margin: 0 auto;
+    clear: initial;
+    width: 5em;
+    height: 5em;
+}
+.float_left{
+    float: left;
+}
+.green{
+    background-color: #ccffcc;
+}
+.yellow{
+    background-color: #ffffcc;
+}
+.position_static{/*一般型,該出現在哪就在哪*/
+    position: static;
+}
+.position_relative{/*一般型,會使其元素「相對地」調整其原本該出現的所在位置*/
+    position: relative;
+    left: 5em;
+}
+.position_absoluted{/*absolute 與 fixed 的行為很像，不一樣的地方在於 absolute 元素的定位是在他所處上層容器的相對位置。如果這個套用 position: absolute 的元素，其上層容器並沒有「可以被定位」的元素的話，那麼這個元素的定位就是相對於該網頁所有內容（也就是 <body> 元素）最左上角的絕對位置，看起來就是這張網頁的絕對位置一樣，所以當你的畫面在捲動時，該元素還是會隨著頁面捲動。請記得，只有套用 position: static 的元素屬於「不會被特別定位」的元素，套用 static 以外的屬性值都算是「可以被定位」的元素。*/
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.position_fixed{/*固定定位（position: fixed）的元素會相對於瀏覽器視窗來定位，這意味著即便頁面捲動，它還是會固定在相同的位置。*/
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+.pokemon_li{
+    height: 100px;
+}
+.pokemon{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+}
+.pokemon:hover{
+    transition-property: width, height,margin-left;
+    transition-duration: 2s;
+    margin-left: 20%;
+    height: 300px;
+    width: 300px;
+}
+.pokemon_string:hover{
+    background-color: #009999;
+    color: #ffffff;
+    transition-property: background-color, color;
+    transition-duration: 2s;
+}
+/* Standard syntax */
+@keyframes example {
+    from {left:20%;}
+    to {left:80%;}
+}
+.pokemon_animate{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    animation:example 5s infinite alternate;/*alternate 是否輪流反向播放*/
+}
+.div_right_bottom {
+    width:100px;
+    height: 100px;
+    float:right;
+    position:fixed;
+    right:0px;
+    bottom:70px;
+    z-index:20;
+    /* border:2px solid #69c; */
+    _position:absolute; /* position fixed for IE6 */
+    background-image: url("../images/ocaw_edit.jpeg");
+    background-repeat: no-repeat;
+}
