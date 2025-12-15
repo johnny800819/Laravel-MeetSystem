@@ -1,10 +1,21 @@
-/vendor
-.composer.lock
-/node_modules
-Homestead.yaml
-Homestead.json
-_ide_helper.php
-.phpstorm.meta.php
+# System Files
 .DS_Store
-.idea
-README.md
+Thumbs.db
+*.log
+
+# IDE Settings
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment Variables (Root level safety)
+.env
+.env.*
+
+# Node
+node_modules/
+npm-debug.log
+
+# Composer
+vendor/
